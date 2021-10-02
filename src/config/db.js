@@ -3,7 +3,7 @@ const mongoose=require('mongoose')
 async function connectDB(){
     
     try {
-        await mongoose.connect('mongodb://localhost:27017/music-app',{
+        await mongoose.connect('mongodb+srv://admin:admin@cluster0.togx2.mongodb.net/music-apps?retryWrites=true&w=majority',{
             useNewUrlParser:true,
             useUnifiedTopology:true
         })

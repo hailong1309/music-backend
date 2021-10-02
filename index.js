@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 let Users = require('./src/model/users')
 var mongo = require('mongodb');
 const Song = require('./src/model/songs')
-
+PORT=3000
 
 app.use(express.urlencoded())
 app.use(express.json())
@@ -146,4 +146,4 @@ app.get('/mymusic', function (req, res, next) {
 })
 
 
-app.listen(process.env.PORT, () => console.log('dang chay r hahha'))
+app.listen('3000', () => console.log('dang chay r hahha'))
