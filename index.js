@@ -145,5 +145,8 @@ app.get('/mymusic', function (req, res, next) {
     })
 })
 
+app.get('/',(req,res)=>{
+    res.json({message:'ok chua'})
+})
 
-app.listen('3000', () => console.log('dang chay r hahha'))
+app.listen(process.env.PORT, () => console.log('dang chay r hahha'))
