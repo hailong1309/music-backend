@@ -117,6 +117,13 @@ app.post('/login', (req, res, next) => {
     })
 
 })
+// get top songs with views count
+app.get('/chart',(req,res,next)=>{
+    Song.find().sort({views:-1}).limit(10).then(data =>{
+        res.json(data)
+    })
+
+})
 
 // get user favorite songs
 app.get('/mymusic', function (req, res, next) {
@@ -145,8 +152,8 @@ app.get('/mymusic', function (req, res, next) {
     })
 })
 
-app.get('/',(req,res)=>{
-    res.json({message:'ok chua'})
-})
+// app.get('/',(req,res)=>{
+//     res.json({message:'ok chua'})
+// })
 
-app.listen(process.env.PORT, () => console.log('dang chay r hahha'))
+app.listen('3000', () => console.log('dang chay r hahha'))
