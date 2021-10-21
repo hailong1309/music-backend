@@ -1,12 +1,12 @@
 
-const mongo=require('mongoose')
+const mongoose=require('mongoose')
 
 
-const user= new mongo.Schema({
+const user= new mongoose.Schema({
     email:{type:String},
     password:{type:String},
     username:{type:String},
     'favorite-songs':{type:Array}
 })
 
-module.exports= mongo.model('user',user)
+module.exports= mongoose.model('user',user)
