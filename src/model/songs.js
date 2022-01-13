@@ -6,7 +6,8 @@ const song= new mongoose.Schema({
     img:{type:String},
     views:{type:String},
     likes:{type:Number},
-    dislikes:{type:Number}
+    dislikes:{type:Number},
+    timePaused:{type:Number}
 })
 
 module.exports= mongoose.model('song',song)

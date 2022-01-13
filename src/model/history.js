@@ -3,7 +3,7 @@ const mongo=require('mongodb')
 
 const history=new mongoose.Schema({
     userID:{type:mongo.ObjectId},
-    songs:{type:Array},
+    songs:{type:Array,default:[]},
 })
 
 module.exports= mongoose.model('history',history)
